@@ -7,6 +7,11 @@ Sai Palepu,
 Anand Pawar,
 John Wilkins
 
+# Set Up Virtual Environments
+1. py -3.11.9 -m venv .venv
+2. source/.venv/Scripts/activate
+3. pip install -r requirements.txt
+
 # Core Technologies
 PySpark — for all data transformation (ingest, clean, enrich, join, feature engineering)
 Parquet — storage format for silver and gold layers
