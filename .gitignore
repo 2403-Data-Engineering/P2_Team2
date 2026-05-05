@@ -156,6 +156,11 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.metals/
+.scala-build/
+.vscode
+/project/
+
 
 # Spyder project settings
 .spyderproject
