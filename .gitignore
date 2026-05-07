@@ -160,6 +160,7 @@ venv.bak/
 .scala-build/
 .vscode
 /project/
+.bloop
 
 
 # Spyder project settings
