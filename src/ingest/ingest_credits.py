@@ -49,7 +49,7 @@ cleaned_data = credits_df \
 
 cleaned_data.write.parquet("src/silver/credits/", "overwrite")
 
-print("cleaned up nulls and strings")
+print("cleaned up nulls and strings in credits.csv")
     
 
 

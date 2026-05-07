@@ -16,31 +16,8 @@ bronze_path = os.getenv("ingest_filepath", "src/bronze/")
 spark = SparkSession.builder.appName("Ingest").getOrCreate()
 
 
-credits_schema = StructType(fields=[
-    StructField("cast", StringType(), False),   # name, type, nullable
-    StructField("crew", StringType(), False),
-    StructField("id", StringType(), False)
-])
-
-# cols: cast,crew,id
-# cols: json, json, string
-credits_df = spark.read.csv(path=f"{bronze_path}credits.csv", header=True, schema=credits_schema)
-
-credits_df.printSchema()
-credits_df.show()
 
 
-credits_df.drop_duplicates()
-
-
-
-
-
-
-keywords_schema = StructType(fields=[
-    StructField("id", StringType(), False),
-    StructField("keywords", StringType(), False)
-])
 
 # cols: id, keywords
 # id = string, keywords = json
