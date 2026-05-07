@@ -47,7 +47,7 @@ cleaned_data = credits_df \
     .dropna(subset = ["id"]) \
     .dropDuplicates(subset = ['id']) 
 
-cleaned_data.write.parquet("src/silver/credits")
+cleaned_data.write.parquet("src/silver/credits/", "overwrite")
 
 print("cleaned up nulls and strings")
     
