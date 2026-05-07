@@ -161,6 +161,7 @@ venv.bak/
 .vscode
 /project/
 .bloop
+.log
 
 
 # Spyder project settings
