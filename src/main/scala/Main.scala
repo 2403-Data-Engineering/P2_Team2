@@ -3,12 +3,14 @@ import org.apache.spark.sql.SparkSession
 object Main {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession.builder()
-      .appName("MySparkJob")
+      .appName("Ingestion")
       .master("local[*]")
       .getOrCreate()
 
     import spark.implicits._
 
+    spark.sparkContext.setLogLevel("WARN")
+    
     val data = Seq(
       ("Alice", 30),
       ("Bob", 25),
